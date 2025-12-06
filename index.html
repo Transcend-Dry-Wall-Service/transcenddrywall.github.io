@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Transcend Dry Wall Service | Small Drywall Repairs in Lancaster, PA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Transcend Dry Wall Service specializes in small drywall repairs for homeowners in Lancaster, PA. Fast, clean, professional fixes for cracks, holes, and water damage.">
+  <style>
+    /* --------- RESET / BASE --------- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #1f2933;
+      background-color: #f5f7fa;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* --------- LAYOUT --------- */
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e4e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+    }
+
+    .logo-text {
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 0.15rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 2px;
+      background-color: #2563eb;
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      background-color: #2563eb;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.15s ease, transform 0.1s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #1d4ed8;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 0.7rem 1.25rem;
+      border-radius: 999px;
+      border: 1px solid #2563eb;
+      color: #2563eb;
+      font-weight: 500;
+      font-size: 0.9rem;
+      background-color: transparent;
+      cursor: pointer;
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    .btn-outline:hover {
+      background-color: #2563eb;
+      color: #ffffff;
+    }
+
+    /* --------- HERO --------- */
+    .hero {
+      background: linear-gradient(135deg, #eef2ff, #f5f7fa);
+      padding: 3rem 0 3.5rem;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: #e0edff;
+      color: #1d4ed8;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.1rem, 3vw + 1rem, 2.8rem);
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      color: #111827;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+      max-width: 32rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .hero-phone {
+      font-size: 0.95rem;
+      color: #374151;
+    }
+
+    .hero-phone strong {
+      font-size: 1.05rem;
+      color: #111827;
+    }
+
+    .hero-note {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-card {
+      background-color: #ffffff;
+      border-radius: 1.25rem;
+      padding: 1.25rem 1.5rem;
+      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e5e7eb;
+    }
+
+    .hero-card-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .hero-card-list {
+      list-style: none;
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    .hero-card-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .hero-card-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background-color: #2563eb;
+      margin-top: 0.45rem;
+      flex-shrink: 0;
+    }
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-photo {
+      max-width: 380px;
+      width: 100%;
+      border-radius: 1.5rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+      object-fit: cover;
+    }
+
+    /* --------- SECTIONS --------- */
+    section {
+      padding: 3rem 0;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #111827;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: #6b7280;
+      text-align: center;
+      margin-bottom: 2rem;
+      max-width: 550px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* SERVICES GRID */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background-color: #ffffff;
+      border-radius: 1rem;
+      padding: 1.25rem 1.25rem 1.1rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+    }
+
+    .service-title {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      font-size: 1rem;
+      color: #111827;
+    }
+
+    .service-text {
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    /* WHY US */
+    .why-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .why-list {
+      list-style: none;
+      font-size: 0.95rem;
+      color: #4b5563;
+    }
+
+    .why-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .check {
+      margin-top: 0.25rem;
+      font-size: 1rem;
+      color: #16a34a;
+    }
+
+    .service-area {
+      background-color: #eef2ff;
+      border-radius: 1rem;
+      padding: 1.25rem;
+      font-size: 0.9rem;
+      color: #374151;
+    }
+
+    .service-area strong {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-size: 0.95rem;
+      color: #111827;
+    }
+
+    /* CONTACT */
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    form {
+      background-color: #ffffff;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-weight: 500;
+      color: #374151;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.6rem 0.7rem;
+      border-radius: 0.6rem;
+      border: 1px solid #d1d5db;
+      font: inherit;
+      resize: vertical;
+      min-height: 2.5rem;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #2563eb;
+      box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.2);
+    }
+
+    textarea {
+      min-height: 110px;
+    }
+
+    .contact-details {
+      font-size: 0.95rem;
+      color: #4b5563;
+    }
+
+    .contact-details p {
+      margin-bottom: 0.7rem;
+    }
+
+    .contact-details strong {
+      color: #111827;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      background-color: #e5f5ff;
+      color: #075985;
+      margin-bottom: 0.4rem;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 1.5rem 0 2rem;
+      font-size: 0.8rem;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    footer a {
+      color: #2563eb;
+    }
+
+    /* --------- RESPONSIVE --------- */
+    @media (max-width: 800px) {
+      .hero-content,
+      .why-grid,
+      .contact-wrapper {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      header {
+        position: static;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+
+      .hero {
+        padding-top: 2rem;
+      }
+
+      .hero-visual {
+        margin-top: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="container nav">
+      <div class="logo-text">Transcend Dry Wall Service</div>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:+17178277807" class="btn-outline">Call Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <div>
+        <div class="hero-badge">
+          <span>Small Drywall Repairs • Lancaster, PA</span>
+        </div>
+        <h1 class="hero-title">Small Drywall Repairs Done Clean, Fast, and Right.</h1>
+        <p class="hero-subtitle">
+          Transcend Dry Wall Service focuses only on small and medium drywall fixes — cracks, holes,
+          dents, seams, water-damage patches, and ceiling repairs. No big construction crews. Just reliable work done with care.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn-primary">Get a Quick Repair Quote</a>
+          <a href="tel:+17178277807" class="btn-outline">Call or Text: (717) 827-7807</a>
+        </div>
+        <p class="hero-phone">
+          Prefer to talk? Call <strong>(717) 827-7807</strong> to talk about your drywall repair.
+        </p>
+        <p class="hero-note">
+          Serving homeowners in Lancaster, PA and nearby areas.
+        </p>
+
+        <div class="hero-card">
+          <h3 class="hero-card-title">We Fix the Drywall Problems Most Contractors Ignore</h3>
+          <ul class="hero-card-list">
+            <li>
+              <span class="hero-card-dot"></span>
+              <span>Holes from moving furniture, kids, pets, or doorknobs hitting the wall.</span>
+            </li>
+            <li>
+              <span class="hero-card-dot"></span>
+              <span>Cracks, seams, nail pops, and joints that keep showing through paint.</span>
+            </li>
+            <li>
+              <span class="hero-card-dot"></span>
+              <span>Small water damage and stains that need cut-out and patching.</span>
+            </li>
+            <li>
+              <span class="hero-card-dot"></span>
+              <span>Ceiling patches and repairs from electricians and plumbers.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <!-- Use your downloaded image here -->
+        <img
+          src="transcend-drywall-hero.jpg"
+          alt="Owner of Transcend Dry Wall Service repairing drywall in a flannel shirt and smiling"
+          class="hero-photo"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Drywall Repair Services</h2>
+      <p class="section-subtitle">
+        We focus exclusively on residential drywall repairs — the small jobs most contractors turn down.
+        From a golf-ball-sized hole to a damaged section that needs cut-out and patching, we restore your walls cleanly and affordably.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3 class="service-title">Drywall Patch & Hole Repair</h3>
+          <p class="service-text">
+            Perfect for dents, doorknob holes, nail pops, accidental damage, and anchor holes.
+            We patch, mud, and sand so the spot blends in and is ready for paint.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-title">Cracks & Seam Repair</h3>
+          <p class="service-text">
+            Cracks and seams that keep coming back are reinforced the right way before finishing.
+            We address the underlying issue, then make the repair smooth and paint-ready.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-title">Water Damage Cut-Outs</h3>
+          <p class="service-text">
+            Leaks and plumbing issues leave soft spots and stains.
+            We cut out the damaged area, install new drywall, tape, mud, and sand it so it’s ready for primer and paint.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-title">Ceiling Repairs & Patches</h3>
+          <p class="service-text">
+            Ceiling cracks, small sagging areas, and patch work from electricians or other trades.
+            We handle the awkward overhead work and keep dust under control as much as possible.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US / SERVICE AREA -->
+  <section id="why">
+    <div class="container why-grid">
+      <div>
+        <h2 class="section-title" style="text-align:left;">Why Homeowners Choose Transcend</h2>
+        <p class="section-subtitle" style="text-align:left; margin-left:0; max-width:100%;">
+          You don’t need a full construction crew in your house — you need someone who shows up,
+          fixes the problem the right way, and respects your home.
+        </p>
+        <ul class="why-list">
+          <li>
+            <span class="check">✔</span>
+            <span><strong>Small jobs welcome</strong> — you’ll never be turned away for “too small of a project.”</span>
+          </li>
+          <li>
+            <span class="check">✔</span>
+            <span><strong>Fast scheduling</strong> — most small repairs can be done within a few days, depending on the scope.</span>
+          </li>
+          <li>
+            <span class="check">✔</span>
+            <span><strong>Clean job sites</strong> — floors protected, dust controlled as much as possible, and cleaned up before we leave.</span>
+          </li>
+          <li>
+            <span class="check">✔</span>
+            <span><strong>Simple, honest pricing</strong> — straightforward quotes with no surprise add-ons.</span>
+          </li>
+          <li>
+            <span class="check">✔</span>
+            <span><strong>Perfect for home sellers, landlords, and busy families</strong> who just need the drywall fixed and off the to-do list.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="service-area">
+        <strong>Service Area – Lancaster, PA</strong>
+        <p>
+          Transcend Dry Wall Service is based in Lancaster, PA and focuses on small drywall repairs for:
+          Lancaster City, Manheim, Lititz, Ephrata, Millersville, Mount Joy, East Petersburg, and nearby communities.
+        </p>
+        <p style="margin-top:0.6rem;">
+          Not sure if you’re in our area?<br />
+          <strong>Text a photo and your address to (717) 827-7807</strong> and we’ll let you know quickly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Get a Free Small Repair Quote</h2>
+      <p class="section-subtitle">
+        Share a few details about your drywall issue and we’ll get back to you with a straightforward estimate.
+        For the fastest quote, text a photo of the damage to <strong>(717) 827-7807</strong>.
+      </p>
+
+      <div class="contact-wrapper">
+        <!-- Simple HTML Form (template) -->
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name*</label>
+              <input type="text" id="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone*</label>
+              <input type="tel" id="phone" placeholder="Best phone number" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="you@example.com" />
+            </div>
+            <div class="form-group">
+              <label for="city">City / Area</label>
+              <input type="text" id="city" placeholder="e.g. Lancaster, Manheim, Lititz" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="details">Project Details*</label>
+            <textarea id="details" placeholder="Describe the damage (hole size, crack length, ceiling or wall, any leaks, etc.)" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary">Submit Request</button>
+          <p style="font-size:0.8rem; color:#6b7280; margin-top:0.5rem;">
+            This form is a template only. Connect it to your email or a form service to receive submissions.
+          </p>
+        </form>
+
+        <!-- Contact Info Block -->
+        <div class="contact-details">
+          <span class="tag">Call, text, or email</span>
+          <p>
+            <strong>Phone:</strong> <a href="tel:+17178277807">(717) 827-7807</a><br />
+            <strong>Email:</strong> <a href="mailto:youremail@example.com">youremail@example.com</a>
+          </p>
+          <p>
+            <strong>Transcend Dry Wall Service</strong><br />
+            Small drywall repairs, patches, and fixes for homeowners in Lancaster, PA.
+          </p>
+          <p>
+            For a faster quote:
+          </p>
+          <ul style="padding-left:1.1rem; margin-top:0.2rem;">
+            <li style="margin-bottom:0.2rem;">Text 2–3 clear photos of the damage.</li>
+            <li style="margin-bottom:0.2rem;">Mention if it’s a wall or ceiling, and approximate size.</li>
+            <li>Let us know if any demolition or leak repair has already been done.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Transcend Dry Wall Service — Small Drywall Repairs in Lancaster, PA.
+      <br />Edit this single HTML file to update text, pricing, or contact info.
+    </div>
+  </footer>
+
+  <script>
+    // Auto-update year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+    // NOTE: Form currently does nothing. To make it work, post to a service (Formspree, Netlify Forms, etc.).
+  </script>
+</body>
+</html>
