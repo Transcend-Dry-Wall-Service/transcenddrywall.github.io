@@ -456,9 +456,8 @@
       }
     }
 
-
 .hero-media {
-  max-width: 360px;           /* keeps the whole block reasonable on desktop */
+  max-width: 420px; /* You can raise this to 480–520px if you want them even bigger */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -471,20 +470,14 @@
   display: block;
 }
 
-/* grid for the two example images underneath */
-.hero-media-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
-}
-
-.hero-media-sample {
-  width: 100%;
-  aspect-ratio: 4 / 3;        /* forces a nice rectangle instead of tiny strips */
-  object-fit: cover;
+.hero-media-large {
+  width: 100% !important;
   border-radius: 14px;
   display: block;
+  object-fit: cover;
+  aspect-ratio: 4 / 3; /* Adjust this: try 3/2 or 16/9 if needed */
 }
+
 
 
   </style>
